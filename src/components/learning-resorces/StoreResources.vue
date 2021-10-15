@@ -1,20 +1,20 @@
 <template>
   <ul v-for="resorce in resorces" :key="resorce.id">
-    <learning-resorce
+    <learning-resource
       :title="resorce.title"
       :description="resorce.description"
       :link="resorce.link"
-    ></learning-resorce>
+    ></learning-resource>
   </ul>
 </template>
 
 <script>
-import LearningResorce from '../learning-resorces/LearningResorce.vue';
+import LearningResource from './LearningResource.vue';
 
 export default {
-  props: ['resorces'],
+  inject: ['resorces'],
   components: {
-    LearningResorce,
+    LearningResource,
   },
 };
 </script>
